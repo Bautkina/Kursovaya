@@ -11,6 +11,7 @@ $(document).ready(function(){
                     success:function (data){
 
                         $('#content').html(data);
+
                     }
                 }
             )
@@ -24,20 +25,33 @@ $(document).ready(function(){
         })
     })
 
-    $(document).on('click', '#btn_search', function(){
+    document.getElementById("btn_search").onclick = function() {
         var Search = $('#search').val();
+        var Search_new = Search.replace(/\s/g, '!');
+        $("#map-view").load("map.php?id=" + Search_new);
      
         $.ajax(
             {
-                url: '/Kursovaya/wow.php', 
+                url: '/Kursovaya/list.php', 
                 method:'POST', 
                 data:{search:Search}, 
                 success:function (data){
-                    console.log('f');
-
+                    console.log(data);
                     $('#content').html(data);
                 }
             }
         )
-    })
+        // $.ajax({
+        //     url: '/Kursovaya/map.php',
+        //     method:'POST', 
+        //             data:{search:Search}, 
+        //             success:function (data){
+        //             $('#map-viev').html(data);
+        //             console.log(data);
+                   
+        //     }
+        // });
+       
+        
+    }
 })

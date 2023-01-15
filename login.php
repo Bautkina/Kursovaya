@@ -7,8 +7,6 @@ $password = sha1($password);
 $query = "SELECT * FROM `Users` WHERE `user_login` = '$login' and user_password = '$password'";
 $result = mysqli_query($link, $query);
 
-
-
         $arr =  mysqli_fetch_array($result);
         $password2 = $arr['user_password']; 
 		$login2 = $arr['user_login']; 
