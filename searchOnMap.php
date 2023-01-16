@@ -49,3 +49,14 @@
 <script src="/main.js"></script>
 </body>
 </html>
+
+$claster1 = $result[0];
+            $claster2 = $result[1];
+            $claster3 = $result[2];
+            $claster4 = $result[3];
+            $claster5 = $result[4];}
+               var claster1 = <?php echo $claster1 ?>;
+            var claster2 = <?php echo $claster2 ?>;
+            var claster3 = <?php echo $claster3 ?>;
+            var claster4 = <?php echo $claster4 ?>;
+            var claster5 = <?php echo $claster5 ?>;
