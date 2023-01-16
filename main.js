@@ -41,17 +41,5 @@ $(document).ready(function(){
                 }
             }
         )
-        // $.ajax({
-        //     url: '/Kursovaya/map.php',
-        //     method:'POST', 
-        //             data:{search:Search}, 
-        //             success:function (data){
-        //             $('#map-viev').html(data);
-        //             console.log(data);
-                   
-        //     }
-        // });
-       
-        
     }
 })
