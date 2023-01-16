@@ -45,7 +45,7 @@
         </div>
         
     </main>
-<script src="/Kursovaya/jquery.js"></script>
-<script src="/Kursovaya/main.js"></script>
+<script src="/jquery.js"></script>
+<script src="/main.js"></script>
 </body>
 </html>

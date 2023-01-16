@@ -12,10 +12,12 @@
                 <form action="login.php" method="POST" class="form">
                 <h1 class="title">Авторизация</h1>
                     <div class="form_in">
-                        <input type="text" name="login" id="login" placeholder="Введите логин" class="login">
+                        <img class="login-icon" src="login.svg" alt="">
+                        <input type="text" name="login" id="login" placeholder="Введите логин" class="login_signin">
                     </div>
                     <div class="form_in">
-                        <input type="password" name="password" id="password" placeholder="Введите пароль" class="password">
+                        <img class="password-icon" src="password.svg" alt="">
+                        <input type="password" name="password" id="password" placeholder="Введите пароль" class="password_signin">
                     </div>    
                         <button type="submit" class="signup">Регистрация</button>
                         <button type="submit" class="signin">Войти</button>

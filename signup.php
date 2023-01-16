@@ -40,6 +40,6 @@
                 </form>
             </div>
         </main>
-        <script src = "/Kursovaya/modal.js"></script>
+        <script src = "/modal.js"></script>
     </body>
 </html>

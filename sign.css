@@ -1,5 +1,5 @@
 body{
-    background-image: url(/Kursovaya/background.jpg);
+    background-image: url(/background.jpg);
     background-size: cover;
     font-family: 'Oswald', sans-serif;
     color:white;
@@ -86,13 +86,44 @@ main{
     outline: none;
 }
 
-.signin:hover, .signup:hover{
-         /* background-color: rgb(255, 120, 58);  */
-         background-position: right;
- }
+.password_signin, .login_signin {
+    width: 90%;
+    padding: 0 0 10px 0;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: transparent; 
+    outline: none;
+    margin-left: 30px;
+}
 
- .login:focus, .password:focus, .name:focus, .lastname:focus {
-    border-bottom: 1px solid #1a73a8;
+.password-icon{
+    position: absolute;
+    height: 20px;
+    margin-left: 2px;
+}
+.login-icon{
+    position: absolute;
+    height: 20px;
+
+}
+
+.signin:hover, .signup:hover{
+    /* background-color: rgb(255, 120, 58);  */
+    background-position: right;
+}
+
+.login:focus, .password:focus, .name:focus, .lastname:focus {
+border-bottom: 1px solid #1a73a8;
 }
 
 .password::placeholder, .login::placeholder, .name::placeholder, .lastname::placeholder {color: #ffffffa2;}
+
+.password_signin:hover, .login_signin:hover{
+         background-position: right;
+ }
+
+ .password_signin:focus, .login_signin:focus {
+    border-bottom: 1px solid #1a73a8;
+}
+
+.password_signin::placeholder, .login_signin::placeholder {color: #ffffffa2;}

@@ -1,5 +1,5 @@
 body{
-    background-image: url(/Kursovaya/background.jpg);
+    background-image: url(/background.jpg);
     background-size: cover;
     font-family: 'Oswald', sans-serif;
     color:white;
@@ -46,11 +46,14 @@ header{
 }
 
 .list_result{
-    border: 1px solid #ff7571;
+    margin-top: 20px;
+    border: 2px solid #ffffff;
+    padding: 10px;
+
 }
 
 #map-view{
-    margin-right: 180px;
+    margin-right: 100px;
 }
 
 .ya_map {
@@ -60,14 +63,14 @@ header{
 }
  
 #map {
-	width: 600px;
-	height: 350px;
+	width: 650px;
+	height: 450px;
 }
 
 .window{
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .logo{
@@ -98,7 +101,7 @@ header{
     background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
     background-size: 200%;
     cursor: pointer; 
-    margin-left: 15px;
+    margin-left: 38px;
     transition: 0.5s;
 }
 

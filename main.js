@@ -5,7 +5,7 @@ $(document).ready(function(){
         if(Search!=""){
             $.ajax(
                 {
-                    url: '/Kursovaya/search.php', 
+                    url: '/search.php', 
                     method:'POST', 
                     data:{search:Search}, 
                     success:function (data){
@@ -32,7 +32,7 @@ $(document).ready(function(){
      
         $.ajax(
             {
-                url: '/Kursovaya/list.php', 
+                url: '/list.php', 
                 method:'POST', 
                 data:{search:Search}, 
                 success:function (data){
