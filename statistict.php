@@ -14,6 +14,9 @@
 <div id="map-view">
     <?php require("mapStatistic.php"); ?>
 </div>
+<div id="statistic">
+    <?php require("infoStatistic.php"); ?>  
+</div>
 <form method="POST" class="form">
     <input type="radio" name="year" id="year" value="2016" />2016 <br>
     <input type="radio" name="year" id="year" value="2017" />2017 <br>
