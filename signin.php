@@ -6,7 +6,8 @@
         <title>Форма авторизации</title>
     </head>
     <body>
-        <header><?php include("header.php")?></header>
+        <header><?php include("header.php");
+        ?></header>
         <main>
             <div class="container">
                 <form action="login.php" method="POST" class="form">
@@ -23,6 +24,14 @@
                         <button type="submit" class="signin">Войти</button>
                 </form>
             </div>
+       
         </main>
+        <?php if (!$session_bul){ ?>
+        <div id="my_window" style="display:block; width:200px; height:80px; background-color:#FF0000; position:absolute; left:400px; top:200px; border:solid 1px #333333; padding:2px;">
+            Ошибка! Попробуйте авторизоваться ещё раз.<br /><br /><br /><center>
+            <input type="button" value="X" onClick="document.getElementById('my_window').style.display='none'" /></center>
+        </div>
+        <?php } ?>
+        <script src="/modal.js"></script>
     </body>
 </html>
