@@ -10,6 +10,8 @@
     <title>Document</title>
 </head>
 <body>
+<header><?php include('header.php'); ?></header>
+<main>
 <table>
     <tr>
         <td>
@@ -17,8 +19,8 @@
                 <?php require("mapStatistic.php"); ?>
             </div>
         </td>
-        <td class = "info_statistic">
-            <form method="POST" class="form">
+        <td class = "info_statistic1">
+            <form method="POST" class="form_statistic">
                 <p class="statistic_title">Получите статистику за год</p> 
                 <input type="radio" name="year" id="year" value="2016" />2016 <br>
                 <input type="radio" name="year" id="year" value="2017" />2017 <br>
@@ -30,8 +32,9 @@
                 <button type="submit" id="btn_year" class="btn_year">Выбрать</button>
             </form>
 </td><td>
-            <?php echo '<div class="info_statistic">';
+            <?php 
                 if(isset($_POST["year"])){
+                    echo '<div class="info_statistic2">';
                     echo '<p class="statistic_title">Статистика за '.$_POST["year"].'</p>';
                     echo '<div class="data"> Самое малое кол-во шумов: '.$min.' было зафисировано на территории, котороая обозначена зелёным</div>';
                     echo '<div class="data"> На территории, которая выделена голубым было зафиксировано: '.$max_2.' шумов</div>';
@@ -43,7 +46,8 @@
         ?>
         </td>
     </tr>
-</table>
+</table></main>
+<footer></footer>
 <script src="/jquery.js"></script>
 <script src="/main.js"></script>
 </body>

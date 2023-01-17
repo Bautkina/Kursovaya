@@ -10,7 +10,6 @@ if (!empty($_POST)){
             \"".md5($_POST["password"])."\"
             )"
         );
-        function_alert("Something is incorrect...");
 
     }
 }

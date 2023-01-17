@@ -17,9 +17,15 @@
                 <div class="functional">
                     <table>
                         <tr>
-                            <td><input class="addSound" type="submit" name="addSound" id="addSound"  value="Добавить шум"></td>
-                            <td><input class="statistic" type="submit" name="statistic" id="statistic"  value="Статистика"></td>
-                            <td><input class="sourceSound" type="submit" name="sourceSound" id="sourceSound"  value="Проверить адрес"></td>
+                            <form action="register.php" method="POST">
+                                <td><input class="addSound" type="submit" name="addSound" id="addSound"  value="Добавить шум"></td>
+                            </form>
+                            <form action="statistic.php" method="POST">
+                                <td><input class="statistic" type="submit" name="statistic" id="statistic"  value="Статистика"></td>
+                            </form>
+                            <form action="searchOnMap.php" method="POST">
+                                <td><input class="sourceSound" type="submit" name="sourceSound" id="sourceSound"  value="Проверить адрес"></td>
+                            </form>
                         </tr>
                     </table>
                 </div>

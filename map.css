@@ -19,13 +19,30 @@ header{
     padding-right: 70px;
 }
 
-.info_statistic{
+main{
+    padding-top:50px;
+}
+
+.info_statistic1{
+    width: 100px; 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 16px #ccc;
+    letter-spacing: 1px; 
+    background-color: #1b59b6b7;
+}
+.data{
+    font-weight: lighter;
+    padding-top: 15px;
+}
+
+.info_statistic2{
     width: 300px; 
     padding: 20px;
     border-radius: 10px; 
     box-shadow: 0 4px 16px #ccc;
     letter-spacing: 1px; 
-    background-color: #1b59b68e;
+    background-color: #1b59b6d8;
     margin-left: 30px;
 }
 
@@ -61,7 +78,7 @@ header{
 
 }
 
-.form{
+.form_statistic{
     width: 180px;
     text-align: center;
 }
@@ -93,7 +110,7 @@ header{
 .window{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+
 }
 
 .logo{
@@ -121,7 +138,7 @@ header{
     letter-spacing: 1px;
     font-size: 16px;
     color :#fff ; 
-    background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
+    background: linear-gradient(to left, #fe7701, #1565C0,#fe7701);
     background-size: 200%;
     cursor: pointer; 
     margin-left: 38px;
