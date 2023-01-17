@@ -19,6 +19,15 @@ header{
     padding-right: 70px;
 }
 
+.info_statistic{
+    width: 300px; 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 16px #ccc;
+    letter-spacing: 1px; 
+    background-color: #1b59b68e;
+    margin-left: 30px;
+}
 
 .container{
     width: 450px; 
@@ -52,8 +61,17 @@ header{
 
 }
 
+.form{
+    width: 180px;
+    text-align: center;
+}
+
 #map-view{
     margin-right: 100px;
+}
+
+#map-view2{
+    margin-right: 50px;
 }
 
 .ya_map {
@@ -65,6 +83,11 @@ header{
 #map {
 	width: 650px;
 	height: 450px;
+}
+
+.statistic_title{
+    font-size:24px;
+    text-align: center;
 }
 
 .window{

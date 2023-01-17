@@ -1,8 +1,7 @@
 <?php 
 include("bd.php");
 include("infoStatistic.php");
-echo '<div class="data"> Самое малое кол-во шумов: '.$min.' было зафисировано на территории, котороая обозначена зелёным</div>';
-echo '<div class="data"> Самое большое кол-во шумов: '.$max_claster.' было зафисировано на территории, котороая обозначена красным</div>';
+
 ?>
 <div id="map"></div>
 <script type="text/javascript">
@@ -20,7 +19,6 @@ echo '<div class="data"> Самое большое кол-во шумов: '.$ma
             new ymaps.control.ZoomControl()  // Добавление элемента управления картой
         ); <?php
         if(isset($_POST["year"])){
-            include("bd.php");
             $query2 = mysqli_query($link, "select id_center from date_".$_POST["year"]." group by id_center;");
             $array = Array();
             while($result = mysqli_fetch_array($query2))
