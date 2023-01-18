@@ -20,7 +20,7 @@ header{
 }
 
 .text{
-    padding-top: 80px;
+    padding-top: 40px;
 }
 
 .h1{
@@ -44,6 +44,8 @@ header{
     animation: printed-text 4s steps(45),
     flashin-border .75s step-start infinite;
 }
+
+
 
 @keyframes flashin-border {
     0% {
@@ -71,7 +73,7 @@ header{
 }
 
 form{
-    padding-top: 70px;
+    padding-top: 30px;
 }
 
 .logo{
@@ -113,3 +115,21 @@ input[type="submit"] {
     font-size: 15px;
     color: white;    
 }
+
+.addSound, .searchSound, .statistic{
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    background-color: rgba(105,97,97, 0.8);
+    font-weight: lighter;
+    padding: 20px;
+    line-height: 20px;
+    width: 200px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 40px;
+    border: #454545;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;   
+}
+

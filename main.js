@@ -28,7 +28,7 @@ $(document).ready(function(){
     document.getElementById("btn_search").onclick = function() {
         var Search = $('#search').val();
         var Search_new = Search.replace(/\s/g, '!');
-        $("#map-view").load("map.php?id=" + Search_new);
+        $("#map-view").load("mapSearch.php?id=" + Search_new);
      
         $.ajax(
             {
@@ -43,4 +43,10 @@ $(document).ready(function(){
         )
     }
 
+    document.getElementById("btn_add").onclick = function() {
+        var Search = $('#add_sound').val();
+        var Search_new = Search.replace(/\s/g, '!');
+        $("#map-view").load("mapAdd.php?id=" + Search_new);
+        console.log("dfdf");
+    }
 })

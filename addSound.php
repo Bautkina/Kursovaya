@@ -21,24 +21,20 @@ session_start();
                 <tr>
                     <td>
                         <div id="map-view">
-                            <?php require("mapSearch.php"); ?>
+                            <?php require("mapAdd.php"); ?>
                         </div>
                     </td>
                     <td>
                         <div class="container">
                             <div class="card">
-                                <div class="card-header">
-                                    <p>Поиск шума на территории</p>
+                                <div class="add_header">
+                                    <p>Добавьте адрес шума</p>
                                 </div>
-                                <div class="card-body">
+                                <div class="add_body">
                                     <form method="POST" class="form">
-                                        <input type="text" class="form-control" id="search" placeholder="Введите адрес">
-                                        <button type="button" id="btn_search" class="btn">Поиск</button>
+                                        <input type="text" class="form-control" name="add_sound" id="add_sound" placeholder="Введите адрес">
+                                        <button type="button" id="btn_add" class="btn">Поиск</button>
                                     </form>
-                                </div>
-                                <div class="card-body">
-                                    <div id="content">
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -48,8 +44,7 @@ session_start();
         </div>
         
     </main>
-
-<script src="/jquery.js"></script>
-<script src="/main.js"></script>
+    <script src="/jquery.js"></script>
+    <script src="/add.js"></script>
 </body>
 </html>
