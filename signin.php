@@ -6,8 +6,7 @@
         <title>Форма авторизации</title>
     </head>
     <body>
-        <header><?php include("header.php");
-        ?></header>
+        <header><?php include("header.php");?></header>
         <main>
             <div class="container">
                 <form action="login.php" method="POST" class="form">
