@@ -1,7 +1,6 @@
 <?php
 require_once 'bd.php';
 
-
 if(isset($_POST["year"])){
     $year = $_POST['year'];
     // $sql = "select * from date_".$year."";
@@ -28,8 +27,5 @@ if(isset($_POST["year"])){
     $max_3_claster = $array_claster[2];
     $max_4_claster = $array_claster[3];
     $min_claster = $array_claster[4];
-
-
 }
-
 ?> 

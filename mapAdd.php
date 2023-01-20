@@ -1,10 +1,7 @@
 
 <div id="map"></div>
 <script type="text/javascript">
-<?php 
-include("bd.php");
-
-    ?>
+<?php include("bd.php"); ?>
 ymaps.ready(init); 
 
 var myMap;
@@ -24,6 +21,7 @@ function init() {
 
         include("bd.php");
         $str = str_replace('!', ' ', $_GET["id"]);
+        $noise = str_replace('!', ' ', $_GET["noise"]);
  
         $ch = curl_init('https://geocode-maps.yandex.ru/1.x/?apikey=6ff6e9de-5e49-4e3e-8f1d-f3246d268c04&format=json&geocode=' . urlencode($str));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -38,7 +36,8 @@ function init() {
         $coordinates = explode(' ', $coordinates);
         print_r($coordinates[0]);
         print_r($coordinates[1]);
-        $sql1 = "insert into open_date_sound_2022(Location, longitude, latitude) value ('".$str."', '".$coordinates[0]."', '".$coordinates[1]."' )";
+        $sql1 = "insert into open_date_sound_2022(Location, longitude, latitude, noisecategory, date) 
+        value ('".$str."', '".$coordinates[0]."', '".$coordinates[1]."', '".$noise."', CURDATE())";
         $result1 = mysqli_query($link, $sql1);
 
 

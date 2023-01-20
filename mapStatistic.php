@@ -1,8 +1,6 @@
 <?php 
 include("bd.php");
-include("infoStatistic.php");
-
-?>
+include("infoStatistic.php");?>
 <div id="map"></div>
 <script type="text/javascript">
     ymaps.ready(init); 
@@ -217,5 +215,4 @@ else{
     }
 ?>
 };
-
 </script>

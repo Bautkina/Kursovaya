@@ -1,9 +1,7 @@
 
 <div id="map"></div>
 <script type="text/javascript">
-<?php 
-include("bd.php");
-?>
+<?php include("bd.php");?>
 ymaps.ready(init); 
 
 var myMap;
@@ -29,9 +27,9 @@ function init() {
             var lat = <?php echo $latitude ?>;
             myMap.setCenter([lat, long],15);
             <?php 
-                $query1 = mysqli_query($link, "SELECT * FROM Open_date_sound_2022 
-                WHERE (latitude < ".$latitude." + 0.08 and latitude > ".$latitude." - 0.08) and 
-                (longitude < ".$longitude." + 0.08 and longitude > ".$longitude." - 0.08);");
+                $query1 = mysqli_query($link, "SELECT * FROM Open_date_sound 
+                WHERE (latitude < ".$latitude." + 0.01 and latitude > ".$latitude." - 0.01) and 
+                (longitude < ".$longitude." + 0.01 and longitude > ".$longitude." - 0.01);");
                 while ($result = mysqli_fetch_assoc($query1)){
                     $latitude = $result["latitude"];
                     $longitude = $result["longitude"];?>

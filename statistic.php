@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="css_file/map.css">
     <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Nunito&family=Oswald:wght@300;400;600&display=swap');</style>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6ff6e9de-5e49-4e3e-8f1d-f3246d268c04" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,7 +51,7 @@ session_start();
     </tr>
 </table></main>
 <footer></footer>
-<script src="/jquery.js"></script>
-<script src="/main.js"></script>
+<script src="/js_file/jquery.js"></script>
+<script src="/js_file/main.js"></script>
 </body>
 </html>

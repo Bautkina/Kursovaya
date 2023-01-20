@@ -5,8 +5,9 @@ session_start();
 if (!empty($_POST)){
     $result = mysqli_query($link, "SELECT * FROM Users WHERE login=\"".$_POST['login']."\" and \"".md5($_POST["password"])."\"");
     if(mysqli_num_rows($result) == 0){
-        mysqli_query($link, "INSERT INTO users (name, login, password) VALUES (
+        mysqli_query($link, "INSERT INTO users (name, lastname, login, password) VALUES (
             \"".$_POST["name"]."\", 
+              \"".$_POST["lastname"]."\", 
             \"".$_POST["login"]."\",
             \"".md5($_POST["password"])."\"
             )"
@@ -16,9 +17,7 @@ if (!empty($_POST)){
             "id" => $arr['id_user'],
             "name" => $arr['user_name']
         ];
-        header("Location: index.php");  
-       
-        
+        header("Location: index.php");      
     }
     else{
         require("signup.php");

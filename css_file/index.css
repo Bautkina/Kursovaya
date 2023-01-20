@@ -1,0 +1,193 @@
+body{
+    background-image: url(/picture/background.jpg);
+    background-size: cover;
+    font-family: 'Oswald', sans-serif;
+    color:white;
+}
+
+header{
+    justify-content: space-between;
+    display: -webkit-flex;
+    padding-top: 20px;
+}
+
+.table_menu table tr td a{ 
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: lighter;
+    color: white;
+    padding-right: 70px;
+}
+
+.text{
+    padding-top: 40px;
+}
+
+.h1{
+    font-size: 98.3px;
+    padding-left: 80px;
+    line-height: 0px;
+    padding-bottom: 0%;
+}
+
+.h2{
+    font-size: 38.4px;
+    padding-left: 180px;
+    line-height: 40px;
+    width: 45ch;
+    overflow: hidden;
+    color: white;
+    font-size: 40px;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid rgb(255, 255, 255);
+    animation: printed-text 4s steps(45),
+    flashin-border .75s step-start infinite;
+}
+
+
+
+@keyframes flashin-border {
+    0% {
+        border-color: rgb(255, 255, 255);
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: rgb(255, 255, 255);
+    }
+}
+
+@keyframes printed-text {
+    from {
+        width: 0%;
+    }
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    padding-top: 30px;
+}
+
+.logo{
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: regular;
+    color: white;
+}
+
+.functional{
+    margin-top: -15px;
+    display: flex;
+    justify-content: center;
+}
+
+.ya_map {
+	font-family: arial;
+	font-size: 12px;
+	color: #454545;
+}
+ 
+#map {
+	width: 660px;
+	height: 600px;
+}
+
+input[type="submit"] {
+    font-family: 'Oswald', sans-serif;
+    background-color: rgba(105,97,97, 0.8);
+    font-weight: lighter;
+    padding: 20px;
+    line-height: 20px;
+    width: 250px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 40px;
+    border: #454545;
+    font-size: 15px;
+    color: white;    
+}
+
+.addSound, .searchSound, .statistic{
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    background-color: rgba(105,97,97, 0.8);
+    font-weight: lighter;
+    padding: 20px;
+    line-height: 20px;
+    width: 200px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 40px;
+    border: #454545;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;   
+}
+
+#modal_window{
+    width: 400px;
+    height:90px;
+    padding: 20px;
+    border:solid 2px #ffffff;
+    background-color: #4d7abd;
+    color: rgb(255, 255, 255);
+    position:absolute; 
+    left:430px; 
+    top:200px;
+    text-align: center;
+    padding-top: 50px;
+    border-radius: 10px;
+    background-image: url(/picture/лапка_котика.gif);
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+
+#modal_about{
+    width: 400px;
+    height:330px;
+    padding: 30px;
+    border:solid 2px #ffffff;
+    background-color: #4d7abd;
+    color: rgb(255, 255, 255);
+    position:absolute; 
+    left:430px; 
+    top:100px;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    background-image: url(/picture/котик.gif);
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+
+.btn_modal{
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none; 
+    border-radius: 5px; 
+    letter-spacing: 1px;
+    font-size: 16px;
+    color :#fff ; 
+    background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
+    background-size: 200%;
+    cursor: pointer; 
+    transition: 0.5s;
+}
+
+.btn_modal:hover{
+    background-position: right;
+}

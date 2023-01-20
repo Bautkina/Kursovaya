@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="sign.css">
+        <link rel="stylesheet" href="css_file/sign.css">
         <title>Форма авторизации</title>
     </head>
     <body>
@@ -12,11 +12,11 @@
                 <form action="login.php" method="POST" class="form">
                 <h1 class="title">Авторизация</h1>
                     <div class="form_in">
-                        <img class="login-icon" src="login.svg" alt="">
+                        <img class="login-icon" src="picture/login.svg" alt="">
                         <input type="text" name="login" id="login" placeholder="Введите логин" class="login_signin">
                     </div>
                     <div class="form_in">
-                        <img class="password-icon" src="password.svg" alt="">
+                        <img class="password-icon" src="picture/password.svg" alt="">
                         <input type="password" name="password" id="password" placeholder="Введите пароль" class="password_signin">
                     </div>    
                         <a href="signup.php" class="signup">Регистрация</a>
@@ -25,7 +25,5 @@
             </div>
        
         </main>
-       
-        <script src="/modal.js"></script>
     </body>
 </html>

@@ -3,7 +3,7 @@ require_once 'bd.php';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $Search = $_POST['search'];
-    $sql = "select * from open_date_sound_2016 where Location like '%".$Search."%' limit 5";
+    $sql = "select * from open_date_sound where Location like '%".$Search."%' limit 5";
     $result = mysqli_query($link, $sql);
     echo '<div class="list_group">';
     if(mysqli_num_rows($result)){

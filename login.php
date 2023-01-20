@@ -15,7 +15,6 @@ if(!$result || mysqli_num_rows($result) == 0){
     <?php  
 }
 else{
-
     $arr =  mysqli_fetch_array($result);
     echo "<script>console.log('Debug Objects: " . $arr['login'] . "' );</script>";
     $password2 = $arr['password']; 
