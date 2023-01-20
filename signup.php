@@ -29,14 +29,7 @@
                     <div class="form_in">
                         <input type="password" name="password" id="password" placeholder="Введите пароль" class="password">
                         </div>
-                        <button type="submit" class="signin">Авторизовать</button>
-                        <button type="submit" class="signup" id="signup" onclick="show('block')">Зарегистрировать</button>
-                        <div id="filter" onclick="show('none')"></div>
-                        <div id="ModalForm">
-                            dssdsdsddsds
-                        </div>
-
-                    <!-- </div> -->
+                        <button type="submit" class="signup" id="signup">Зарегистрировать</button>
                 </form>
             </div>
         </main>

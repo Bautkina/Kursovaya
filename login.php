@@ -2,16 +2,15 @@
 session_start();
 include("bd.php");
 $login = $_POST['login'];
-$password = $_POST['password'];
-// $password = sha1($password);
+$password = md5($_POST["password"]);
 $query = "SELECT * FROM `Users` WHERE `login` = '".$login."' and password = '".$password."'";
 $result = mysqli_query($link, $query);
 if(!$result || mysqli_num_rows($result) == 0){
     require("signin.php");?>
         
-    <div id="my_window" style="display:block; width:200px; height:80px; background-color:#FF0000; position:absolute; left:400px; top:200px; border:solid 1px #333333; padding:2px;">
+    <div id="modal_window" style="display:block;">
         Ошибка! Попробуйте авторизоваться ещё раз.<br /><br /><br /><center>
-        <input type="button" value="X" onClick="document.getElementById('my_window').style.display='none'" /></center>
+        <input type="button" value="Хорошо" class="btn_modal" onClick="document.getElementById('modal_window').style.display='none'" /></center>
     </div>
     <?php  
 }

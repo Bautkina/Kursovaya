@@ -19,7 +19,7 @@
                         <img class="password-icon" src="password.svg" alt="">
                         <input type="password" name="password" id="password" placeholder="Введите пароль" class="password_signin">
                     </div>    
-                        <button type="submit" class="signup">Регистрация</button>
+                        <a href="signup.php" class="signup">Регистрация</a>
                         <button type="submit" class="signin">Войти</button>
                 </form>
             </div>

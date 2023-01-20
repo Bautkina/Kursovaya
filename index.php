@@ -31,8 +31,8 @@ session_start();
                                 <a href="/searchOnMap.php" id="searchSound" class="searchSound">Проверить адрес</a></td>
                             <?php }
                             else{ ?>
-                                <td><a href="#" class="addSound" type="button" name="addSound" id="addSound"  onClick="document.getElementById('my_window').style.display='block';">Добавить шум</a></td>
-                                <td><a href="#" class="searchSound" type="button" name="searchSound" id="searchSound"  onClick="document.getElementById('my_window').style.display='block';">Проверить адрес</a></td>
+                                <td><a href="#" class="addSound" type="button" name="addSound" id="addSound"  onClick="document.getElementById('modal_window').style.display='block';">Добавить шум</a></td>
+                                <td><a href="#" class="searchSound" type="button" name="searchSound" id="searchSound"  onClick="document.getElementById('modal_window').style.display='block';">Проверить адрес</a></td>
                             <?php } ?>
                         </tr>
                     </table>
@@ -41,9 +41,9 @@ session_start();
         <main>
         <footer></footer>
      
-        <div id="my_window" style="display:none; width:200px; height:80px; background-color:#FF0000; position:absolute; left:400px; top:200px; border:solid 1px #333333; padding:2px;">
-            Ошибка! Попробуйте авторизоваться ещё раз.<br /><br /><br /><center>
-        <input type="button" value="X" onClick="document.getElementById('my_window').style.display='none'" /></center>
-    </div>
+        <div id="modal_window" style="display:none">
+            Чтобы воспользоваться данными функциями, необходимо авторизоваться!<center>
+        <input type="button" class="btn_modal "value="Хорошо" onClick="document.getElementById('modal_window').style.display='none'" /></center>
+        </div>
     </body>
 </html>

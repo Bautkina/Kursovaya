@@ -12,6 +12,64 @@ main{
     height: 100vh;
 }
 
+header{
+    justify-content: space-between;
+    display: -webkit-flex;
+    padding-top: 20px;
+}
+
+.table_menu table tr td a{ 
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: lighter;
+    color: white;
+    padding-right: 70px;
+}
+
+.logo{
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: regular;
+    color: white;
+}
+
+
+#modal_window{
+    width: 400px;
+    height:90px;
+    padding: 20px;
+    border:solid 2px #ffffff;
+    background-color: #4d7abd;
+    color: rgb(255, 255, 255);
+    position:absolute; 
+    left:430px; 
+    top:200px;
+    text-align: center;
+    padding-top: 50px;
+    border-radius: 10px;
+}
+
+.btn_modal{
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 5px; 
+    letter-spacing: 1px;
+    font-size: 16px;
+    color :#fff ; 
+    /* background-color: #4781ffd2;  */
+    background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
+    background-size: 200%;
+    cursor: pointer; 
+    margin-left: 12px;
+    transition: 0.5s;
+}
+
+.btn_modal:hover{
+    /* background-color: rgb(255, 120, 58);  */
+    background-position: right;
+}
+
 .form {
     width: 300px; 
     padding: 32px;
@@ -41,6 +99,7 @@ main{
     margin-left: 12px;
     transition: 0.5s;
 }
+
 
 .signup {
     border: none; 

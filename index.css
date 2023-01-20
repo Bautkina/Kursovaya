@@ -133,3 +133,53 @@ input[type="submit"] {
     text-decoration: none;   
 }
 
+#modal_window{
+    width: 400px;
+    height:90px;
+    padding: 20px;
+    border:solid 2px #ffffff;
+    background-color: #4d7abd;
+    color: rgb(255, 255, 255);
+    position:absolute; 
+    left:430px; 
+    top:200px;
+    text-align: center;
+    padding-top: 50px;
+    border-radius: 10px;
+}
+
+#modal_about{
+    width: 400px;
+    height:200px;
+    padding: 20px;
+    border:solid 2px #ffffff;
+    background-color: #4d7abd;
+    color: rgb(255, 255, 255);
+    position:absolute; 
+    left:430px; 
+    top:200px;
+    text-align: left;
+    padding-top: 50px;
+    border-radius: 10px;
+}
+
+.btn_modal{
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none; 
+    border-radius: 5px; 
+    letter-spacing: 1px;
+    font-size: 16px;
+    color :#fff ; 
+    /* background-color: #4781ffd2;  */
+    background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
+    background-size: 200%;
+    cursor: pointer; 
+    margin-left: 12px;
+    transition: 0.5s;
+}
+
+.btn_modal:hover{
+    /* background-color: rgb(255, 120, 58);  */
+    background-position: right;
+}
