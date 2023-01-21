@@ -21,7 +21,7 @@ session_start();
                 <tr>
                     <td>
                         <div id="map-view">
-                            <?php require("mapAdd.php"); ?>
+                            <?php include("mapAdd.php"); ?>
                         </div>
                     </td>
                     <td>
@@ -34,17 +34,34 @@ session_start();
                                     <form class="form">
                                         <input type="text" class="form-control" name="add_sound" id="add_sound" placeholder="Введите адрес">
                                 
-                                        <select id="select" name="select">
+                                        <select id="select_noise" name="select_noise">
                                         <?php 
                                         require("bd.php");
-                                        $query = mysqli_query($link, "SELECT distinct noisecategory FROM open_date_sound;");
-                                        while ($result = mysqli_fetch_assoc($query)){
+                                        $query1 = mysqli_query($link, "SELECT distinct noisecategory FROM open_date_sound;");
+                                        while ($result = mysqli_fetch_assoc($query1)){
                                             echo '<option value="'.$result['noisecategory'].'" class="option">'.$result['noisecategory'].'</option>';
-                                        }
-                                       ?>
-                                       
+                                        }?> 
                                         </select>
-                                        <button type="button" id="btn_add" class="btn">Добавить</button>
+
+                                        <select id="select_admarea" name="select_admarea">
+                                        <?php
+                                        $query2 = mysqli_query($link, "SELECT distinct admarea FROM open_date_sound;");
+                                        while ($result = mysqli_fetch_assoc($query2)){
+                                            echo '<option value="'.$result['admarea'].'" class="option">'.$result['admarea'].'</option>';
+                                        }
+                                        ?>
+                                        </select>
+
+                                        <select id="select_district" name="select_district">
+                                        <?php
+                                        $query3 = mysqli_query($link, "SELECT distinct district FROM open_date_sound;");
+                                        while ($result = mysqli_fetch_assoc($query3)){
+                                            echo '<option value="'.$result['district'].'" class="option">'.$result['district'].'</option>';
+                                        }
+                                        ?>
+                                         </select>
+
+                                        <button type="button"  onClick="document.getElementById('modal_window').style.display='block';" value="<?php echo $_SESSION["user"]["id"] ?>" id="btn_add" class="btn" >Добавить</button>
                                     </form>
                                 </div>
                             </div>
@@ -53,7 +70,11 @@ session_start();
                 </tr>
             </table>
         </div>
-        
+
+        <div id="modal_window" style="display:none">
+        Нужно обязательно ввести все данные!<center>
+        <input type="button" class="btn_modal "value="Хорошо" onClick="document.getElementById('modal_window').style.display='none';" /></center>
+    </div>
     </main>
     <script src="/js_file/jquery.js"></script>
     <script src="/js_file/add.js"></script>

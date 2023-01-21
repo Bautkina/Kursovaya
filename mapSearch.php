@@ -1,7 +1,9 @@
 
 <div id="map"></div>
 <script type="text/javascript">
-<?php include("bd.php");?>
+<?php 
+include("bd.php");
+?>
 ymaps.ready(init); 
 
 var myMap;
@@ -48,7 +50,7 @@ function init() {
     }
     else{
         include("bd.php");
-        $query = mysqli_query($link, "SELECT * FROM Open_date_sound_2022");
+        $query = mysqli_query($link, "SELECT * FROM Open_date_sound_2016");
         while ($result = mysqli_fetch_assoc($query)){
             $latitude = $result["latitude"];
             $longitude = $result["longitude"];?>

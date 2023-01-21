@@ -182,3 +182,42 @@ border-bottom: 1px solid #1a73a8;
 }
 
 .password_signin::placeholder, .login_signin::placeholder {color: #ffffffa2;}
+
+#modal_about{
+    width: 400px;
+    height:330px;
+    padding: 30px;
+    border:solid 2px #ffffff;
+    background-color: #4d7abd;
+    color: rgb(255, 255, 255);
+    position:absolute; 
+    left:530px; 
+    top:100px;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    background-image: url(/picture/котик.gif);
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+
+.btn_modal{
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none; 
+    border-radius: 5px; 
+    letter-spacing: 1px;
+    font-size: 16px;
+    color :#fff ; 
+    background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
+    background-size: 200%;
+    cursor: pointer; 
+    transition: 0.5s;
+}
+
+.btn_modal:hover{
+    background-position: right;
+}

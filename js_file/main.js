@@ -29,6 +29,7 @@ $(document).ready(function(){
         var Search = $('#search').val();
         var Search_new = Search.replace(/\s/g, '!');
         $("#map-view").load("mapSearch.php?id=" + Search_new);
+    console.log('Debug Objects: " . $output . "' );
      
         $.ajax(
             {

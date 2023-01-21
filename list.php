@@ -1,9 +1,10 @@
 <?php
 require_once 'bd.php';
 
+
 if($_SERVER['REQUEST_METHOD']=='POST'){
     $search = $_POST['search'];
-    $sql = "select * from open_date_sound_2016 where Location like '%".$search."%'";
+    $sql = "select * from open_date_sound where Location like '%".$search."%'";
     $result = mysqli_query($link, $sql);
 
     while($row = mysqli_fetch_assoc($result)){
@@ -14,6 +15,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         echo '<div class="data"> Адрес: '.$row['Location'].'</div>';
         echo '<div class="data"> Источник шума: '.$row['NoiseCategory'].'</div>';
         echo '</div>';
-    } 
+    }
+    
 }
+
 ?> 
