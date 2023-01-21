@@ -19,19 +19,23 @@ require("bd.php");
 
         $coordinates = $res['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point']['pos'];
         $coordinates = explode(' ', $coordinates);
-        print_r($coordinates[0]);
-        print_r($coordinates[1]);
-       
-
         $sql1 = "insert into open_date_sound_2023(Location, longitude, latitude, noisecategory, date, user, admarea, district) 
         value ('".$str."', '".$coordinates[0]."', '".$coordinates[1]."', '".$noise."', CURDATE(), ".$_GET["ses_id"]." , '".$admarea."', '".$district."')";
         $result1 = mysqli_query($link, $sql1);
         $sql2 = "insert into open_date_sound(Location, longitude, latitude, noisecategory, date, user, admarea, district) 
         value ('".$str."', '".$coordinates[0]."', '".$coordinates[1]."', '".$noise."', CURDATE(), ".$_GET["ses_id"]." , '".$admarea."', '".$district."')";
         $result2 = mysqli_query($link, $sql2);
-        require("index.php");
-?>
-        <?php
-        } 
+        echo '<div id="modal_window2" style="display:block">
+        Вы добавили запись в базу данных!<center>
+        <input type="button" class="btn_modal" value="Хорошо" onClick="document.getElementById(\'modal_window2\').style.display=\'none\'" /></center>
+        </div>';
+        
+        }
+        else{
+            echo '<div id="modal_window2" style="display:block">
+            Необходимо заполните все строки!<center>
+        <input type="button" class="btn_modal" value="Хорошо" onClick="document.getElementById(\'modal_window2\').style.display=\'none\'" /></center>
+        </div>';
+        }
     ?> 
-</script>
+

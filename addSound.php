@@ -25,13 +25,13 @@ session_start();
                         </div>
                     </td>
                     <td>
-                        <div class="container">
+                        <div class="container2">
                             <div class="card">
                                 <div class="add_header">
                                     <p class="title_add">Добавьте адрес шума</p>
                                 </div>
-                                <div class="add_body">
-                                    <form class="form">
+                                <div class="add_body" id="add_body">
+                                    <form class="form" id="form">
                                         <input type="text" class="form-control" name="add_sound" id="add_sound" placeholder="Введите адрес">
                                 
                                         <select id="select_noise" name="select_noise">
@@ -61,7 +61,7 @@ session_start();
                                         ?>
                                          </select>
 
-                                        <button type="button"  onClick="document.getElementById('modal_window').style.display='block';" value="<?php echo $_SESSION["user"]["id"] ?>" id="btn_add" class="btn" >Добавить</button>
+                                        <button type="button"  value="<?php echo $_SESSION["user"]["id"] ?>" id="btn_add" class="btn" >Добавить</button>
                                     </form>
                                 </div>
                             </div>
@@ -69,13 +69,11 @@ session_start();
                     </td>
                 </tr>
             </table>
-        </div>
-
-        <div id="modal_window" style="display:none">
-        Нужно обязательно ввести все данные!<center>
-        <input type="button" class="btn_modal "value="Хорошо" onClick="document.getElementById('modal_window').style.display='none';" /></center>
-    </div>
+            <SCRIPT type="text/javascript" language="JavaScript" 
+src="js_file/add.js"></SCRIPT>
     </main>
+    <footer></footer>
+    
     <script src="/js_file/jquery.js"></script>
     <script src="/js_file/add.js"></script>
 </body>
