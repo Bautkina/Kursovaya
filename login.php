@@ -23,7 +23,12 @@ else{
     if ($password == $password2 && $login2 == $login){
         $user = mysqli_fetch_assoc($result);
         $_SESSION['user'] = [
-            "id" => $arr['id']
+            "id" => $arr['id'],
+            "name" => $arr['name'],
+            "lastname" => $arr['lastname'],
+            "login" => $arr['login'],
+            "date" => $arr['birth'],
+            "password" => $password
         ];
         header("Location: index.php");  
     }

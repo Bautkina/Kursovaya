@@ -1,22 +1,19 @@
 <?php
 require("bd.php");
-session_start();
 
 if (!empty($_POST)){
-    $result = mysqli_query($link, "SELECT * FROM Users WHERE login=\"".$_POST['login']."\" and \"".md5($_POST["password"])."\"");
+    $result = mysqli_query($link, "SELECT * FROM Users WHERE login=\"".$_POST['login']."\" and password=\"".md5($_POST["password"])."\"");
+
     if(mysqli_num_rows($result) == 0){
-        mysqli_query($link, "INSERT INTO users (name, lastname, login, password) VALUES (
+        mysqli_query($link, "INSERT INTO users (name, lastname, login, password, birth) VALUES (
             \"".$_POST["name"]."\", 
               \"".$_POST["lastname"]."\", 
             \"".$_POST["login"]."\",
-            \"".md5($_POST["password"])."\"
+            \"".md5($_POST["password"])."\",
+            \"".$_POST["date"]."\"
             )"
         );
-        $user = mysqli_fetch_assoc($result);
-        $_SESSION['user'] = [
-            "id" => $arr['id_user'],
-            "name" => $arr['user_name']
-        ];
+        
         header("Location: index.php");      
     }
     else{

@@ -73,6 +73,10 @@ header{
     background-position: right;
 }
 
+#date{
+    margin-bottom: 30px;
+}
+
 .form {
     width: 300px; 
     padding: 32px;
@@ -107,11 +111,15 @@ header{
     border: none; 
     border-radius: 5px; 
     letter-spacing: 1px;
-    font-size: 10px;
+    font-size: 16px;
     color :#fff ; 
-    background-color: #4781ff94; 
+    background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
     cursor: pointer; 
     height: 30px;
+    background-size: 200%;
+    transition: 0.5s;
+    cursor: pointer; 
+    height: 40px;
 }
 
 

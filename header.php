@@ -9,6 +9,8 @@
             <?php 
             if (isset($_SESSION['user'])){ ?>
                 <td><a href="/exit.php" >Выйти</a></td>
+                <td><a href="/account.php" >Профиль</a></td>
+
             <?php }
             else{ ?>
                 <td><a href="/signup.php">Регистрация</a></td>

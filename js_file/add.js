@@ -10,6 +10,5 @@ $(document).ready(function(){
         var Admarea_new =  Admarea.replace(/\s/g, '!');
         var District_new =  District.replace(/\s/g, '!');
         $("#map-view").load("mapAdd.php?id=" + Search_new + "&noise=" + Noise_new + "&ses_id=" + Ses_id + "&admarea=" + Admarea_new + "&district=" + District_new);
-  
     }
 })
