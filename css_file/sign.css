@@ -102,10 +102,26 @@ header{
     background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
     background-size: 200%;
     cursor: pointer; 
-    margin-left: 12px;
+    margin-left: 100px;
     transition: 0.5s;
 }
 
+.update_btn{
+    text-decoration: none;
+    border: none; 
+    border-radius: 5px; 
+    letter-spacing: 1px;
+    font-size: 16px;
+    color :#fff ; 
+    background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
+    cursor: pointer; 
+    height: 30px;
+    background-size: 200%;
+    transition: 0.5s;
+    cursor: pointer; 
+    height: 40px;
+    padding: 10px 20px;
+}
 
 .signup {
     border: none; 
@@ -120,6 +136,7 @@ header{
     transition: 0.5s;
     cursor: pointer; 
     height: 40px;
+    margin-left: 70px;
 }
 
 
@@ -176,7 +193,7 @@ header{
 
 }
 
-.signin:hover, .signup:hover{
+.signin:hover, .signup:hover, .update_btn:hover{
     background-position: right;
 }
 
@@ -197,6 +214,7 @@ border-bottom: 1px solid #1a73a8;
 .password_signin::placeholder, .login_signin::placeholder {color: #ffffffa2;}
 
 #modal_about{
+    z-index: 101;
     width: 400px;
     height:330px;
     padding: 30px;
@@ -204,7 +222,7 @@ border-bottom: 1px solid #1a73a8;
     background-color: #4d7abd;
     color: rgb(255, 255, 255);
     position:absolute; 
-    left:530px; 
+    left:430px; 
     top:100px;
     text-align: left;
     padding-top: 20px;

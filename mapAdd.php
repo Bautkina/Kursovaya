@@ -19,12 +19,24 @@ require("bd.php");
 
         $coordinates = $res['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point']['pos'];
         $coordinates = explode(' ', $coordinates);
-        $sql1 = "insert into open_date_sound_2023(Location, longitude, latitude, noisecategory, date, user, admarea, district) 
-        value ('".$str."', '".$coordinates[0]."', '".$coordinates[1]."', '".$noise."', CURDATE(), ".$_GET["ses_id"]." , '".$admarea."', '".$district."')";
-        $result1 = mysqli_query($link, $sql1);
-        $sql2 = "insert into open_date_sound(Location, longitude, latitude, noisecategory, date, user, admarea, district) 
-        value ('".$str."', '".$coordinates[0]."', '".$coordinates[1]."', '".$noise."', CURDATE(), ".$_GET["ses_id"]." , '".$admarea."', '".$district."')";
-        $result2 = mysqli_query($link, $sql2);
+
+        try{
+
+            $sql1 = "insert into open_date_sound(noisecategory, date, user, location) 
+            value ('".$noise."', CURDATE(), '".$_GET["ses_id"]."', '".$str."')";
+            $result1 = mysqli_query($link, $sql1);
+        }
+        catch(Exception $e){//если такого адреса ещё не было, поскольку таблицы взаимосвязаны 
+            $sql1 = "insert into Location(Location, longitude, latitude, district) 
+            value ('".$str."', '".$coordinates[0]."', '".$coordinates[1]."', '".$district."')";
+            $result1 = mysqli_query($link, $sql1);
+    
+            $sql1 = "insert into open_date_sound(noisecategory, date, user, location) 
+            value ('".$noise."', CURDATE(), '".$_GET["ses_id"]."', '".$str."')";
+            $result1 = mysqli_query($link, $sql1);
+        }
+    
+    
         echo '<div id="modal_window2" style="display:block">
         Вы добавили запись в базу данных!<center>
         <input type="button" class="btn_modal" value="Хорошо" onClick="document.getElementById(\'modal_window2\').style.display=\'none\'" /></center>

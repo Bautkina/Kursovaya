@@ -26,7 +26,7 @@ session_start();
                 <div class="form_in">
                     <input type="password" name="password" id="password" placeholder="Введите пароль" class="password">
                     </div>
-                    <center><button type="submit" class="signup" id="signup">Изменить данные</button></center>
+                    <center><button type="submit" class="update_btn" id="update_btn">Изменить данные</button></center>
             </form>      
         <main>
         <footer></footer>

@@ -9,12 +9,12 @@ include("infoStatistic.php");?>
     function init() {
 
         myMap = new ymaps.Map("map", {
-            center: [55.708770, 37.634479], // Координаты центра карты
-            zoom: 10 // Маштаб карты
+            center: [55.708770, 37.634479], 
+            zoom: 10 
         }); 
 
         myMap.controls.add(
-            new ymaps.control.ZoomControl()  // Добавление элемента управления картой
+            new ymaps.control.ZoomControl()  
         ); <?php
         if(isset($_POST["year"])){
             $query2 = mysqli_query($link, "select id_center from date_".$_POST["year"]." group by id_center;");

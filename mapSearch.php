@@ -21,7 +21,7 @@ function init() {
     if(isset($_GET["id"])){
 
         $str = str_replace('!', ' ', $_GET["id"]);
-        $query = mysqli_query($link, "SELECT * FROM Open_date_sound where Location = '".$str."'");
+        $query = mysqli_query($link, "SELECT * FROM Location where Location = '".$str."'");
         while ($result = mysqli_fetch_assoc($query)){
             $latitude = $result["latitude"];
             $longitude = $result["longitude"];?>
@@ -29,7 +29,7 @@ function init() {
             var lat = <?php echo $latitude ?>;
             myMap.setCenter([lat, long],15);
             <?php 
-                $query1 = mysqli_query($link, "SELECT * FROM Open_date_sound 
+                $query1 = mysqli_query($link, "SELECT * FROM Location 
                 WHERE (latitude < ".$latitude." + 0.01 and latitude > ".$latitude." - 0.01) and 
                 (longitude < ".$longitude." + 0.01 and longitude > ".$longitude." - 0.01);");
                 while ($result = mysqli_fetch_assoc($query1)){
@@ -50,7 +50,7 @@ function init() {
     }
     else{
         include("bd.php");
-        $query = mysqli_query($link, "SELECT * FROM Open_date_sound_2016");
+        $query = mysqli_query($link, "SELECT * FROM date_2022");
         while ($result = mysqli_fetch_assoc($query)){
             $latitude = $result["latitude"];
             $longitude = $result["longitude"];?>

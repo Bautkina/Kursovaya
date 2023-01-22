@@ -275,7 +275,7 @@ main{
     background-position-y: bottom;
 }
 
-.btn_modal{
+.btn_modal, #btn_year{
     padding: 10px 20px;
     margin-top: 30px;
     border: none; 
@@ -289,6 +289,6 @@ main{
     transition: 0.5s;
 }
 
-.btn_modal:hover{
+.btn_modal:hover, #btn_year:hover{
     background-position: right;
 }
