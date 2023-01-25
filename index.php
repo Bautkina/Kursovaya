@@ -22,15 +22,16 @@ session_start();
                 <div class="functional">
                     <table>
                         <tr>
-                       <td> <a href="/statistic.php" id="statistic" class="statistic">Статистика</a></td>
                             <?php 
 
                             if (isset($_SESSION['user'])){ 
                                 ?>
+                                <td> <a href="/statistic.php" id="statistic" class="statistic">Статистика</a></td>
                                 <a href="/addSound.php" id="addSound" class="addSound">Добавить шум</a></td>
                                 <a href="/searchOnMap.php" id="searchSound" class="searchSound">Проверить адрес</a></td>
                             <?php }
                             else{ ?>
+                                <td> <a href="#" id="statistic" class="statistic" onClick="document.getElementById('modal_window').style.display='block';">Статистика</a></td>
                                 <td><a href="#" class="addSound" type="button" name="addSound" id="addSound"  onClick="document.getElementById('modal_window').style.display='block';">Добавить шум</a></td>
                                 <td><a href="#" class="searchSound" type="button" name="searchSound" id="searchSound"  onClick="document.getElementById('modal_window').style.display='block';">Проверить адрес</a></td>
                             <?php } ?>

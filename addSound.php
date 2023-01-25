@@ -43,18 +43,9 @@ session_start();
                                         }?> 
                                         </select>
 
-                                        <select id="select_admarea" name="select_admarea">
-                                        <?php
-                                        $query2 = mysqli_query($link, "SELECT distinct admarea FROM district;");
-                                        while ($result = mysqli_fetch_assoc($query2)){
-                                            echo '<option value="'.$result['admarea'].'" class="option">'.$result['admarea'].'</option>';
-                                        }
-                                        ?>
-                                        </select>
-
                                         <select id="select_district" name="select_district">
                                         <?php
-                                        $query3 = mysqli_query($link, "SELECT distinct district FROM district;");
+                                        $query3 = mysqli_query($link, "SELECT distinct district FROM District;");
                                         while ($result = mysqli_fetch_assoc($query3)){
                                             echo '<option value="'.$result['district'].'" class="option">'.$result['district'].'</option>';
                                         }

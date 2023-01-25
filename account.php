@@ -13,13 +13,14 @@ session_start();
         <header><?php include("header.php")?></header>
         <main>
             <form class="form">
+                <div class="upd">
                     <?php echo '<h1>Личная информация</h1>' ?>
                     <?php echo 'Идентификатор: '.$_SESSION["user"]["id"].'<br>'; ?>
                     <?php echo 'Имя: '.$_SESSION["user"]["name"].'<br>'; ?>
-                    <?php echo 'Фамилия: '. $_SESSION["user"]["lastname"].'<br>'; ?>
-                    <?php echo 'День рождение: '. $_SESSION["user"]["birth"].'<br><br>'; ?>
-
+                    <?php echo 'E-mail: '. $_SESSION["user"]["email"].'<br>'; ?>
+                </div>
                     <center><a href="/update_account.php" id="update" class="update_btn">Изменить данные</a></td></center>
+
             </form>
         <main>
         <footer></footer>

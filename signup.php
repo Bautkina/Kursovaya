@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css_file/sign.css">
+        <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Nunito&family=Oswald:wght@300;400;600&display=swap');</style>
+
+        
 
         <title>Форма авторизации</title>
     </head>
@@ -15,11 +18,9 @@
                     <input type="text" name="name" id="name" placeholder="Введите имя" class="name">
                     </div>
                 <div class="form_in">
-                    <input type="text" name="lastname" id="lastname" placeholder="Введите фамилию" class="lastname">
+                    <input type="email" name="email" id="email" placeholder="Введите почту" class="email">
                     </div>
-                    
-                <input type="date" name="date" id="date" />
-
+          
                 <div class="form_in">
                     <input type="text" name="login" id="login" placeholder="Введите логин" class="login">
                     </div>

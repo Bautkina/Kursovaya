@@ -1,5 +1,5 @@
 
-<a href="/" class="logo">dream life</a>
+<a href="/" class="logo">not noise</a>
 
 <div class="table_menu">
     <table>

@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("bd.php");
 $login = $_POST['login'];
 $password = md5($_POST["password"]);
@@ -19,15 +18,14 @@ else{
     echo "<script>console.log('Debug Objects: " . $arr['login'] . "' );</script>";
     $password2 = $arr['password']; 
     $login2 = $arr['login']; 
-
+    session_start();
     if ($password == $password2 && $login2 == $login){
         $user = mysqli_fetch_assoc($result);
         $_SESSION['user'] = [
             "id" => $arr['id'],
             "name" => $arr['name'],
-            "lastname" => $arr['lastname'],
+            "email" => $arr['email'],
             "login" => $arr['login'],
-            "date" => $arr['birth'],
             "password" => $password
         ];
         header("Location: index.php");  

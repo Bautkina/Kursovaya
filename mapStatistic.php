@@ -56,7 +56,7 @@ include("infoStatistic.php");?>
                 var max_3_claster = <?php echo $max_3_claster ?>;
                 var max_4_claster = <?php echo $max_4_claster ?>;
                 var min_claster = <?php echo $min_claster ?>;
-                if (center == claster1){
+                
                     if (center == max_claster){
                         myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
                             preset: "islands#redDotIcon"  
@@ -82,116 +82,8 @@ include("infoStatistic.php");?>
                             preset: "islands#greenDotIcon"  
                         });
                     }
-                }
-                if (center == claster2){
-                    if (center == max_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#redDotIcon"  
-                        });
-                    }
-                    else if (center == max_2_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#blueDotIcon"  
-                        });
-                    }
-                    else if (center == max_3_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#yellowDotIcon"  
-                        });
-                    }
-                    else if (center == max_4_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#pinkDotIcon"  
-                        });
-                    }
-                    else if (center == min_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#greenDotIcon"  
-                        });
-                    }
-                }
-                if (center == claster3){
-                    if (center == max_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#redDotIcon"  
-                        });
-                    }
-                    else if (center == max_2_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#blueDotIcon"  
-                        });
-                    }
-                    else if (center == max_3_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#yellowDotIcon"  
-                        });
-                    }
-                    else if (center == max_4_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#pinkDotIcon"  
-                        });
-                    }
-                    else if (center == min_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#greenDotIcon"  
-                        });
-                    }
-                }
-                if (center == claster4){
-                    if (center == max_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#redDotIcon"  
-                        });
-                    }
-                    else if (center == max_2_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#blueDotIcon"  
-                        });
-                    }
-                    else if (center == max_3_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#yellowDotIcon"  
-                        });
-                    }
-                    else if (center == max_4_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#pinkDotIcon"  
-                        });
-                    }
-                    else if (center == min_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#greenDotIcon"  
-                        });
-                    }
-                }
-                if (center == claster5){
-                    if (center == max_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#redDotIcon"  
-                        });
-                    }
-                    else if (center == max_2_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#blueDotIcon"  
-                        });
-                    }
-                    else if (center == max_3_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#yellowDotIcon"  
-                        });
-                    }
-                    else if (center == max_4_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#pinkDotIcon"  
-                        });
-                    }
-                    else if (center == min_claster){
-                        myPlacemark = new ymaps.Placemark([lat, long], {}, {  // Координаты метки объекта
-                            preset: "islands#greenDotIcon"  
-                        });
-                    }
-                }
-
+                
+                
                 myMap.geoObjects.add(myPlacemark);
     <?php
             }
@@ -199,7 +91,7 @@ include("infoStatistic.php");?>
 
 else{
         include("bd.php");
-        $query = mysqli_query($link, "SELECT * FROM Open_date_sound_2017");
+        $query = mysqli_query($link, "SELECT * FROM date_2022");
         while ($result = mysqli_fetch_assoc($query)){
             $latitude = $result["latitude"];
             $longitude = $result["longitude"];?>

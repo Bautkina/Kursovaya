@@ -39,11 +39,11 @@ function init() {
                     var lat = <?php echo $latitude ?>;
             
 
-            myPlacemark = new ymaps.Placemark([lat, long], 
-            {balloonContent: '<?php echo $result['Location']; ?>'}, 
-            {preset: "twirl#darkblueDotIcon"});
+                    myPlacemark = new ymaps.Placemark([lat, long], 
+                    {balloonContent: '<?php echo $result['Location']; ?>'}, 
+                    {preset: "twirl#darkblueDotIcon"});
 
-            myMap.geoObjects.add(myPlacemark);
+                    myMap.geoObjects.add(myPlacemark);
         <?php 
                 }
         }

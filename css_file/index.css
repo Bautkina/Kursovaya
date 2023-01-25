@@ -15,6 +15,10 @@ header{
     padding-top: 20px;
 }
 
+input{
+    color: #ffffff;
+}
+
 .table_menu table tr td a{ 
     text-decoration: none;
     font-size: 15px;
@@ -24,24 +28,24 @@ header{
 }
 
 .text{
-    padding-top: 40px;
+    padding-top: 90px;
 }
 
 .h1{
-    font-size: 98.3px;
+    font-size: 70px;
     padding-left: 80px;
     line-height: 0px;
     padding-bottom: 0%;
 }
 
 .h2{
-    font-size: 38.4px;
+    font-size: 43px;
     padding-left: 180px;
     line-height: 40px;
     width: 45ch;
     overflow: hidden;
     color: white;
-    font-size: 40px;
+
     font-family: monospace;
     white-space: nowrap;
     border-right: 4px solid rgb(255, 255, 255);
@@ -89,7 +93,6 @@ form{
 }
 
 .functional{
-    margin-top: -15px;
     display: flex;
     justify-content: center;
 }
@@ -129,7 +132,7 @@ input[type="submit"] {
     line-height: 20px;
     width: 200px;
     text-align: center;
-    margin: 40px;
+    margin: 70px;
     border: #454545;
     font-size: 15px;
     color: white;
@@ -149,7 +152,6 @@ input[type="submit"] {
     text-align: center;
     padding-top: 50px;
     border-radius: 10px;
-    background-image: url(/picture/лапка_котика.gif);
     background-size: 20%;
     background-repeat: no-repeat;
     background-position-x: right;
@@ -157,8 +159,9 @@ input[type="submit"] {
 }
 
 #modal_about{
+    z-index: 101px;
     width: 400px;
-    height:330px;
+    height:380px;
     padding: 30px;
     border:solid 2px #ffffff;
     background-color: #4d7abd;
@@ -179,16 +182,17 @@ input[type="submit"] {
 
 .btn_modal{
     padding: 10px 20px;
-    margin-top: 10px;
+    margin-top: 2px;
     border: none; 
     border-radius: 5px; 
     letter-spacing: 1px;
     font-size: 16px;
     color :#fff ; 
-    background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
+    background: linear-gradient(to left, #fe7701, #1565C0,#fe7701);
     background-size: 200%;
     cursor: pointer; 
     transition: 0.5s;
+    margin-top: 10px;
 }
 
 .btn_modal:hover{

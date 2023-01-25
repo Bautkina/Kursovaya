@@ -16,17 +16,17 @@ session_start();
                 <h1 class="title">Изменение данных</h1>
                 <div class="form_in">
                     <input type="text" name="name" id="name" placeholder="Введите имя" class="name">
-                    </div>
+                </div>
                 <div class="form_in">
-                    <input type="text" name="lastname" id="lastname" placeholder="Введите фамилию" class="lastname">
-                    </div>
+                    <input type="text" name="email" id="email" placeholder="Введите email" class="email">
+                </div>
                 <div class="form_in">
                     <input type="text" name="login" id="login" placeholder="Введите логин" class="login">
                     </div>
                 <div class="form_in">
                     <input type="password" name="password" id="password" placeholder="Введите пароль" class="password">
-                    </div>
-                    <center><button type="submit" class="update_btn" id="update_btn">Изменить данные</button></center>
+                </div>
+                <center><button type="submit" class="update_btn" id="update_btn">Изменить данные</button></center>
             </form>      
         <main>
         <footer></footer>

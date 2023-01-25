@@ -10,6 +10,11 @@ body{
     color:white;
 }
 
+input{
+    color: #ffffff;
+    z-index: 99;
+}
+
 main{
     display: flex;
     justify-content: center;
@@ -42,7 +47,7 @@ header{
 
 #modal_window{
     width: 400px;
-    height:90px;
+    height:110px;
     padding: 20px;
     border:solid 2px #ffffff;
     background-color: #4d7abd;
@@ -53,24 +58,6 @@ header{
     text-align: center;
     padding-top: 50px;
     border-radius: 10px;
-}
-
-.btn_modal{
-    padding: 10px 20px;
-    border: none; 
-    border-radius: 5px; 
-    letter-spacing: 1px;
-    font-size: 16px;
-    color :#fff ; 
-    background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
-    background-size: 200%;
-    cursor: pointer; 
-    margin-left: 12px;
-    transition: 0.5s;
-}
-
-.btn_modal:hover{
-    background-position: right;
 }
 
 #date{
@@ -84,6 +71,7 @@ header{
     box-shadow: 0 4px 16px #ccc;
     letter-spacing: 1px; 
     background-color: #1b59b68e;
+    z-index: 100;
 }
 
 .title { 
@@ -99,7 +87,7 @@ header{
     letter-spacing: 1px;
     font-size: 16px;
     color :#fff ; 
-    background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
+    background: linear-gradient(to left, #fe7701, #1565C0,#fe7701);
     background-size: 200%;
     cursor: pointer; 
     margin-left: 100px;
@@ -107,13 +95,14 @@ header{
 }
 
 .update_btn{
+   
     text-decoration: none;
     border: none; 
     border-radius: 5px; 
     letter-spacing: 1px;
     font-size: 16px;
     color :#fff ; 
-    background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
+    background: linear-gradient(to left, #fe7701, #1565C0,#fe7701);
     cursor: pointer; 
     height: 30px;
     background-size: 200%;
@@ -123,13 +112,17 @@ header{
     padding: 10px 20px;
 }
 
+.upd{
+    margin-bottom: 20px;
+}
+
 .signup {
     border: none; 
     border-radius: 5px; 
     letter-spacing: 1px;
     font-size: 16px;
     color :#fff ; 
-    background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
+    background: linear-gradient(to left, #fe7701, #1565C0,#fe7701);
     cursor: pointer; 
     height: 30px;
     background-size: 200%;
@@ -144,15 +137,6 @@ header{
     position: relative; 
     margin-bottom: 32px;
 }
-
-#ModalForm{
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 130;
-    display: none;
-}
 #filter{
     background-color: #1a74a880;
     position: fixed;
@@ -163,7 +147,7 @@ header{
     z-index: 100;
     display: none;
 }
-.password, .login, .name, .lastname {
+.password, .login, .name, .email {
     width: 100%;
     padding: 0 0 10px 0;
     border: none;
@@ -197,11 +181,11 @@ header{
     background-position: right;
 }
 
-.login:focus, .password:focus, .name:focus, .lastname:focus {
+.login:focus, .password:focus, .name:focus, .email:focus {
 border-bottom: 1px solid #1a73a8;
 }
 
-.password::placeholder, .login::placeholder, .name::placeholder, .lastname::placeholder {color: #ffffffa2;}
+.password::placeholder, .login::placeholder, .name::placeholder, .email::placeholder {color: #ffffffa2;}
 
 .password_signin:hover, .login_signin:hover{
          background-position: right;
@@ -212,11 +196,12 @@ border-bottom: 1px solid #1a73a8;
 }
 
 .password_signin::placeholder, .login_signin::placeholder {color: #ffffffa2;}
-
 #modal_about{
-    z-index: 101;
+    position: relative;
+
+    z-index: 150;
     width: 400px;
-    height:330px;
+    height:380px;
     padding: 30px;
     border:solid 2px #ffffff;
     background-color: #4d7abd;
@@ -237,16 +222,17 @@ border-bottom: 1px solid #1a73a8;
 
 .btn_modal{
     padding: 10px 20px;
-    margin-top: 10px;
+    margin-top: 2px;
     border: none; 
     border-radius: 5px; 
     letter-spacing: 1px;
     font-size: 16px;
     color :#fff ; 
-    background: linear-gradient(to left, #ff7571, #1565C0,#ff7571);
+    background: linear-gradient(to left, #fe7701, #1565C0,#fe7701);
     background-size: 200%;
     cursor: pointer; 
     transition: 0.5s;
+    margin-top: 10px;
 }
 
 .btn_modal:hover{

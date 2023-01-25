@@ -16,13 +16,13 @@ if(isset($_POST["year"])){
         $array_claster[] = $row['id_center'];
     }
 
-    $max = $array_count[0];
+    $max = $array_count[0];//кол-во шумов
     $max_2 = $array_count[1];
     $max_3 = $array_count[2];
     $max_4 = $array_count[3];
     $min = $array_count[4];
 
-    $max_claster = $array_claster[0];
+    $max_claster = $array_claster[0];//кластер
     $max_2_claster = $array_claster[1];
     $max_3_claster = $array_claster[2];
     $max_4_claster = $array_claster[3];

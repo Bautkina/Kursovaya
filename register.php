@@ -2,15 +2,14 @@
 require("bd.php");
 
 if (!empty($_POST)){
-    $result = mysqli_query($link, "SELECT * FROM Users WHERE login=\"".$_POST['login']."\" and password=\"".md5($_POST["password"])."\"");
+    $result = mysqli_query($link, "SELECT * FROM Users WHERE (login=\"".$_POST['login']."\" and password=\"".md5($_POST["password"])."\") or email=\"".($_POST["email"])."\"");
 
     if(mysqli_num_rows($result) == 0){
-        mysqli_query($link, "INSERT INTO users (name, lastname, login, password, birth) VALUES (
+        mysqli_query($link, "INSERT INTO Users (name, email, login, password) VALUES (
             \"".$_POST["name"]."\", 
-              \"".$_POST["lastname"]."\", 
+              \"".$_POST["email"]."\", 
             \"".$_POST["login"]."\",
-            \"".md5($_POST["password"])."\",
-            \"".$_POST["date"]."\"
+            \"".md5($_POST["password"])."\"
             )"
         );
         

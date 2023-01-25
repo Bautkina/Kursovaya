@@ -5,7 +5,6 @@ require("bd.php");
     if(isset($_GET["id"]) && $_GET["id"]!=NULL){
         $str = str_replace('!', ' ', $_GET["id"]);
         $noise = str_replace('!', ' ', $_GET["noise"]);
-        $admarea = str_replace('!', ' ', $_GET["admarea"]);
         $district = str_replace('!', ' ', $_GET["district"]);
  
         $ch = curl_init('https://geocode-maps.yandex.ru/1.x/?apikey=6ff6e9de-5e49-4e3e-8f1d-f3246d268c04&format=json&geocode=' . urlencode($str));
@@ -26,7 +25,7 @@ require("bd.php");
             value ('".$noise."', CURDATE(), '".$_GET["ses_id"]."', '".$str."')";
             $result1 = mysqli_query($link, $sql1);
         }
-        catch(Exception $e){//если такого адреса ещё не было, поскольку таблицы взаимосвязаны 
+        catch(Exception $e){
             $sql1 = "insert into Location(Location, longitude, latitude, district) 
             value ('".$str."', '".$coordinates[0]."', '".$coordinates[1]."', '".$district."')";
             $result1 = mysqli_query($link, $sql1);

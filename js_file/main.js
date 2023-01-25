@@ -9,9 +9,7 @@ $(document).ready(function(){
                     method:'POST', 
                     data:{search:Search}, 
                     success:function (data){
-
-                        $('#content').html(data);
-
+                    $('#content').html(data);
                     }
                 }
             )
@@ -36,7 +34,6 @@ $(document).ready(function(){
                 method:'POST', 
                 data:{search:Search}, 
                 success:function (data){
-                    console.log(data);
                     $('#content').html(data);
                 }
             }
